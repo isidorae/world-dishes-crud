@@ -2,11 +2,8 @@
 export default function DishesComp({dishesData, getDishToEditID, deleteDish}) {
 
   const accessDishFields = (dishID, name, country) => {
-
     //pass ID to parent APP.jsx 
    getDishToEditID(dishID, name, country)
-    // getDataToEdit(name, country)
-
 
   }
 
@@ -26,7 +23,6 @@ export default function DishesComp({dishesData, getDishToEditID, deleteDish}) {
     return (
         <>
        { dishesData.map((el) => {
-         
             return(
                     <tr key={el.id}>
                       <td>{el.name}</td>

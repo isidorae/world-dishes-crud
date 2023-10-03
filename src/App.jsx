@@ -91,7 +91,6 @@ function App() {
 
   }
 
-
     //PART TWO: UPDATE API DATA
 
   const editDish = async (id, updatedData) => {

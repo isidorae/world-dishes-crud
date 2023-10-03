@@ -13,8 +13,6 @@ export default function Table({dishesData, isLoading, getDishToEditID, deleteDis
 //   getDishesData()
 // }, [dishesData])
 
-
-
     return(
         <div className="table-div">
                 <table>

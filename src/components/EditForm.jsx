@@ -17,7 +17,7 @@ export default function EditForm({dishData, ID, editDish, setToEditing}) {
     //INPUT VALUES
     const [dish, setUpdatedDish] = useState("")
     const [country, setUpdatedCountry] = useState("")
- 
+
 
     //*********** EDIT FUNCTIONS */
 
@@ -30,14 +30,8 @@ export default function EditForm({dishData, ID, editDish, setToEditing}) {
         }
 
         editDish(ID, updatedData)
-        // alert("product updated")
     }
-
-    // const updateDish = () => {
-    //     e.preventDefault()
-    //     alert("we pass newdata")
-    // }
-
+    //*********** CANCEL EDIT
     const returnToDefault = (e) => {
         e.preventDefault()
         setToEditing(false)
@@ -46,8 +40,6 @@ export default function EditForm({dishData, ID, editDish, setToEditing}) {
     return(
         <div>
         <form onSubmit={updateProduct}>
-        {/* <input name="name" value={dishToUpdate == {} ? dish : dishToUpdate.name} onChange={(e) => dishToUpdate == {} ? setDish(e.target.value) : setDishToUpdate(e.target.value)} type="text" placeholder="dish"/> <br />
-        <input name="origen" value={dishToUpdate == {} ? dish : dishToUpdate.origen} onChange={(e) => setCountry(e.target.value)} type="text" placeholder="country"/><br /> */}
         <input name="name" value={dish}  onChange={(e) => setUpdatedDish(e.target.value)} type="text" placeholder="dish"/> <br />
         <input name="origen" value={country} onChange={(e) => setUpdatedCountry(e.target.value)} type="text" placeholder="country"/><br />
         <button className="form-edit-btn">Update</button>

@@ -28,8 +28,6 @@ export default function InputForm({addDish}) {
     return(
       <div>
         <form onSubmit={saveProduct}>
-        {/* <input name="name" value={dishToUpdate == {} ? dish : dishToUpdate.name} onChange={(e) => dishToUpdate == {} ? setDish(e.target.value) : setDishToUpdate(e.target.value)} type="text" placeholder="dish"/> <br />
-        <input name="origen" value={dishToUpdate == {} ? dish : dishToUpdate.origen} onChange={(e) => setCountry(e.target.value)} type="text" placeholder="country"/><br /> */}
         <input name="name" value={dish} onChange={(e) => setDish(e.target.value)} type="text" placeholder="dish"/> <br />
         <input name="origen" value={country} onChange={(e) => setCountry(e.target.value)} type="text" placeholder="country"/><br />
         <button className="submit-btn">Submit</button>
